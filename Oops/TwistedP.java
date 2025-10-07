@@ -10,7 +10,6 @@ class TwistedP
 		int result=t.factors(x);
 		String result1=t.isPrime(result);
 		System.out.println(result1);
-		t.calRev(x,result1);
 		t.rev= t.calRev(x,result1);
 		int count=t.factors(t.rev);
 		System.out.println(count==0?"Twited prime":"not twisted prime");

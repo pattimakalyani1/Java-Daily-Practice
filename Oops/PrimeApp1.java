@@ -1,9 +1,12 @@
+import java.util.Scanner;
 class PrimeApp1
 {
 	public static void main(String [] args)
 	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number:");
 		Prime prime=new Prime();
-		int result=prime.calFactor(11);
+		int result=prime.calFactor(sc.nextInt());
 		prime.checkPrime(result);
 	}
 }

@@ -1,15 +1,28 @@
+import java.util.Scanner;
 class Student
 {
 	public static void main(String [] args)
 	{
 		std s=new std();
-		int total=s.calTotal(24,25,18);
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter roll no:");
+		s.roll=sc.nextInt();
+		System.out.println("enter name:");
+		s.name=sc.next();
+		System.out.println("enter section:");
+		s.section=sc.next();
+		System.out.println("enter email:");
+		s.email=sc.next();
+		System.out.println("enter fee:");
+		s.fee=sc.nextInt();	
+		System.out.println("enter m1 marks:");
+		s.m1=sc.nextInt();
+		System.out.println("enter m2 marks:");
+		s.m2=sc.nextInt();
+		System.out.println("enter m3 marks:");
+		s.m3=sc.nextInt();
+		int total=s.calTotal(s.m1,s.m2,s.m3);
 		double Per=s.calPer(total);
-		s.fee=10000;
-		s.roll=1;
-		s.name="kalayani";
-		s.section="A";
-		s.email="kalyani@gmail.com";
 		double donatio=s.calDonation(Per,s.fee);
 		double scholarship=s.calScholarship(Per,s.fee);
 		String section=s.calSection(Per);
