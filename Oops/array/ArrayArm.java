@@ -60,7 +60,7 @@ class ArrayArm1
 {
 	boolean isArm(int num)
 	{
-		int number=num;
+		        int number=num;
 			int temp=number,temp1=number;
 			int count=0,sum=0;
 			while(number!=0)
@@ -104,6 +104,52 @@ class ArrayArm1
 		System.out.println("no of Armstrongs in a array:"+count1);
 	}
 }
+
+//using aray parameterized
+class ArrayArm2
+{
+	int[] isArm(int [] b)
+	{
+		int [] d= new int [b.length];
+		for(int x=0;x<=b.length-1;x++)
+		{
+		        int number=b[x];
+			int temp=number,temp1=number;
+			int count=0,sum=0;
+			while(number!=0)
+			{
+				count++;
+				number/=10;
+			}
+		
+			while(temp!=0)
+			{
+				sum=sum+(int)(Math.pow(temp%10,count));
+				temp/=10;
+			}
+			if(temp1==sum)
+				d[x]=1;	
+			else
+				d[x]=0;
+			
+		}
+		return d;
+	}
+	public static void main(String [] args)
+	{
+		int [] a= new int[]{153,307,371,370,23,45};
+		ArrayArm2 aa=new ArrayArm2();
+		int c[]=aa.isArm(a);
+		for(int x=0;x<=c.length-1;x++)
+		{
+			if(c[x]==1)
+				System.out.println(a[x]+" is armstrong");
+		}
+	}
+}
+		
+		
+
 
 			
 

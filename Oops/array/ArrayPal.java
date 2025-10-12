@@ -90,6 +90,40 @@ class ArrayPal1
 	}
 }
 
+class ArrayPal2
+{
+	public static void main(String [] args)
+	{
+		int a[]=new int[]{121,11,131,32,43,654};
+		ArrayPal2 ap=new ArrayPal2();
+		int c[]=ap.isPalin(a);
+		for(int x=0;x<=a.length-1;x++)
+		{	
+			if(c[x]==1)
+				System.out.println(a[x]+" is palindrome");
+		}
+	}
+	int[] isPalin(int [] b)
+	{
+		int [] d=new int [b.length];
+		for(int x=0;x<=b.length-1;x++)
+		{
+			int num=b[x],temp=num;
+			int rev=0;
+			while(num!=0)
+			{
+				rev=rev*10+(num%10);
+				num/=10;
+			}
+			if(temp==rev)
+				d[x]=1;
+			else
+				d[x]=0;
+		}
+		return d;
+	}
+}
+
 
 
 
