@@ -276,6 +276,145 @@ class P12
 }
 
 
+class P13
+{
+	public static void main(String [] args)
+	{
+		int rows=5;
+		for(int r=1;r<=rows;r++)
+		{
+			for(int c=1;c<=r;c++)
+			{
+				System.out.print("# ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+class P14
+{
+	public static void main(String [] args)
+	{
+		int rows=5;
+		for(int r=1;r<=rows;r++)
+		{
+			for(int c=rows;c>=r;c--)
+			{
+				System.out.print("# ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+class P15
+{
+	public static void main(String [] args)
+	{
+		int rows=5;
+		for(int r=1;r<=rows;r++)
+		{
+			for(int c=1;c<=r;c++)
+			{
+				if(r==1||c==1||r==c||r==rows)
+					System.out.print("# ");
+				else
+					System.out.print("  ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+class P16
+{
+	public static void main(String [] args)
+	{
+		int rows=5;
+		for(int r=1;r<=rows;r++)
+		{
+			for(int c=rows;c>=r;c--)
+			{
+				if(r==1||c==r||c==rows)
+					System.out.print("# ");
+				else
+					System.out.print("  ");
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+class P17
+{
+	public static void main(String [] args)
+	{
+		int rows=4;
+		for(int r=1;r<=rows;r++)
+		{
+			int temp=r;
+			for(int c=1;c<=r;c++)
+			{
+				System.out.print(temp+" ");
+				temp--;
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+class P18
+{
+	public static void main(String [] args)
+	{
+		int rows=5;
+		for(int r=1;r<=rows;r++)
+		{	int temp=1;
+			for(int c=r;c<=rows;c++)
+			{
+				System.out.print(temp+" ");
+				temp++;
+			}
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
