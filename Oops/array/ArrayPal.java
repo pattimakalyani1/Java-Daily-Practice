@@ -90,6 +90,62 @@ class ArrayPal1
 	}
 }
 
+
+
+
+//using array parameter:
+
+class ArrayPal3
+{
+	public static void main(String [] args)
+	{
+		int a[]=new int[]{121,11,131,32,43,654};
+		ArrayPal3 ap=new ArrayPal3();
+		int d[]=ap.isPalin(a);
+		for(int temp:d)
+			System.out.println(temp+" ");
+		System.out.println("no of palindrome in array:"+d.length);
+	}
+	int[] isPalin(int [] a)
+	{
+		int [] b=new int[a.length];	
+		int count=0;
+		for(int x=0;x<=a.length-1;x++)
+		{
+			int rev=0,copy=a[x];
+			while(a[x]!=0)
+			{
+				rev=rev*10+(a[x]%10);
+				a[x]/=10;
+			}
+			if(copy==rev)
+			{
+				count++;
+				b[x]=copy;
+			}
+		
+		}
+		int [] c=new int[count];
+		for(int x=0;x<=c.length-1;x++)
+		{
+			c[x]=b[x];
+		}
+		return c;
+	}
+}
+
+/*
+
+121
+11
+131
+no of palindrome in array:3
+
+*/
+
+
+//using array parameters:(using booleans values)
+
 class ArrayPal2
 {
 	public static void main(String [] args)

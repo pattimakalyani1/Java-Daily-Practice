@@ -24,7 +24,6 @@ class ArrInsert
 			a[z]=a[z-1];
 			
 		}
-		a[x+1]=search;
 		a[x]=insert;
 		System.out.println("after insertion:");
 		for(int temp:a)
@@ -71,7 +70,6 @@ class ArrInsert1
 		}
 		}
 		}
-		a[x+1]=search;
 		a[x]=insert;
 		System.out.println("after insertion:");
 		for(int temp:a)

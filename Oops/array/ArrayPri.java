@@ -92,38 +92,71 @@ class ArrayPri1
 	}
 }
 
-
+ z
 //using array parameters
 
-/*class ArrPri2
+class ArrPri3
 {
-	String[] isPrime(int [] b)
+	int[] isPrime(int [] b)
 	{
+		int d[]=new int [b.length];
 		int count=0;
-		for(int x=1;x<=b[x]/2;x++)
+		for(int x=0;x<=b.length-1;x++)
 		{
-			if(b[x]%x==0)
+			int num=b[x];
+			//count=0;
+			if(num<2)
 			{
-				count++;
-				
+				continue;
 			}
-		}
-		if(count==1)
-			return "prime";
+			boolean f=true;
+			for(int y=2;y<=num/2;y++)
+			{
+
+				if(num%y==0)
+				{
+					f=false;
+					break;
+				}
+			}
 		
+		if(f)
+		{
+			d[count]=num;
+			count++;			
+		}
+		}
+		int [] v=new int[count];
+		for(int x=0;x<=v.length-1;x++)
+			v[x]=d[x];
+		return v;
 	}
 	public static void main(String [] args)
 	{
-		ArrPri2 ar=new ArrPri2();
-		int [] a=new int[]{1,2,3,4,5};
-		String c[]=ar.isPrime(a);
-		for(String temp:c)
+		ArrPri3 ar=new ArrPri3();
+		int [] a=new int[]{1,9,2,3,4,5};
+		int c[]=ar.isPrime(a);
+		for(int temp:c)
+		{
 			System.out.println(temp);
+		
+		}
+		System.out.println("no of primes in a array:"+c.length);
 			
 
 	}
-}*/
+}
 
+/*
+
+2
+3
+5
+no of primes in a array:3
+
+*/
+
+//using Arrya parameters(using boolean values)
 
 class ArrPri2
 {
@@ -171,10 +204,6 @@ class ArrPri2
 
 	}
 }
-
-
-
-
 
 
 
