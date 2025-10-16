@@ -361,21 +361,30 @@ class MatrixArr8
 			}
 			System.out.println();
 		}
-		int x=(a.length)/2;
-		int y=(a.length)/x;
-		for(int r=0;r<x;r++)
+		int x=a.length;
+		int y=a[0].length;
+		System.out.println("transpose array:");
+		for(int r=0;r<y;r++)
 		{
-				for(int c=0;c<y;c++)
-				{
-					
-					System.out.print(a[r][c]+" ");
-					
+				for(int c=0;c<x;c++)
+				{	
+					System.out.print(a[c][r]+" ");	
 				}
-		
+				System.out.println();
 		}
 	}
 }
 
+/*
+
+1 2 3
+4 5 6
+transpose array:
+1 4
+2 5
+3 6
+
+*/
 
 
 
