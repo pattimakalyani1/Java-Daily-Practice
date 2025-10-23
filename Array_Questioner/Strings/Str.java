@@ -1,29 +1,56 @@
-import java.util.Arrays;
 class Str
 {
 	public static void main(String [] args)
 	{
-		String s1="listen";
-		String s2="silent";
-		int count=0;
-		if(s1.length()==s2.length())
+		String s=new String("hello all good morning evening");
+		String a[]=s.split(" ");
+		int count[]=new int[a.length];
+		int count1=0;
+		for(int x=0;x<=a.length-1;x++)
 		{
-			char c[]=s1.toCharArray();
-			char d[]=s2.toCharArray();
-			Arrays.sort(c);
-			Arrays.sort(d);
-			for(int x=0;x<=c.length-1;x++)
+			 count[x]=a[x].length();
+			 if(count1<count[x])
 			{
-				if(c[x]!=d[x])
-				{
-					count++;
-					break;
-				}
+				count1=count[x];
 			}
-			System.out.println(count==0?"anagram":"not anagram");
-						
 		}
-		else
-			System.out.println("anagram");
+		
+		for(int x=0;x<=a.length-1;x++)
+		{
+			if(count[x]==count1)
+				System.out.println(a[x]);
+		}
 	}
-}
+}			
+	
+/*
+
+morning
+evening
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
