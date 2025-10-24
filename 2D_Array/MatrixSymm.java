@@ -79,4 +79,49 @@ b array:
 3 4 5
 not symmetric	
 
-*/		
+*/	
+
+
+
+//or
+
+
+class MatrixSymm1
+{
+	public static void main(String[] args)
+	{
+		int a[][]=new int[][]{{1,2,3},{2,3,4},{3,4,5}};
+		int count=0;
+		boolean b=true;
+		for(int x=0;x<=a.length-1;x++)
+		{
+			for(int y=0;y<=a[0].length-1;y++)
+			{
+				System.out.print(a[y][x]+" ");
+			}System.out.println();
+		}
+		System.out.println("A array:");
+		for(int x=0;x<=a.length-1;x++)
+		{
+			for(int y=0;y<=a[0].length-1;y++)
+			{
+				if(a[x][y]!=a[y][x])
+					b=false;
+			}
+
+		}
+		System.out.println(b?"symm":"not symm");
+	}
+}
+
+/*
+
+1 2 3
+2 3 4
+3 4 5
+A array:
+symm
+
+
+*/
+	
