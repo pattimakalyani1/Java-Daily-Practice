@@ -8,8 +8,8 @@ class RevWordsPalin
 		{
 			StringBuffer sb=new StringBuffer(a[x]);
 			sb.reverse();
-			//String c=sb.toString();
-			if(sb.equals(a[x]))
+			String c=sb.toString();
+			if(c.equals(a[x]))
 				System.out.println(a[x]+" ");
 				
 		}
