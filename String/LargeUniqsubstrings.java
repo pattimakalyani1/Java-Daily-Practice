@@ -2,7 +2,7 @@ class LargeUniqsubstrings
 {
 	public static void main(String [] args)
 	{
-		String s="hello all";
+		String s="abcbcbba";
 		String word="";
 		String s1="";	
 		int max=0;
@@ -42,4 +42,6 @@ class LargeUniqsubstrings
 			
 		}System.out.println(max_word);
 	}
-}		
+}
+
+//abc		
