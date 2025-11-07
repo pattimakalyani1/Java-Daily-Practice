@@ -68,33 +68,115 @@ class Str
 
 
 
-/*
+
+//unique
 class Freq1
 {
 	public static void main(String [] args)
 	{
-		String s=new String("hello all good all morning");
-		String s1=s.split();
+		String s=new String("hello all good all morning morning");
+		String s1[]=s.split(" ");
+		int count=0;
 		boolean b[]=new boolean[s1.length];
 		for(int x=0;x<=s1.length-1;x++)
 		{
 			String word=s1[x];
 			if(b[x]==true)
 				continue;
+			count=0;
 			for(int y=x+1;y<=s1.length-1;y++)
 			{
 				String word1=s1[y];
 				if(word.equals(word1))
 				{
 					b[y]=true;
+					count++;
 				}
-				if(b[x]==false)
-					System.out.println(s1[x]);
 			}
+			
+			if(count==0)
+				System.out.println(s1[x]);
+			
 		}
 	}
-}*/
+}
+
+//hello
+//good
+
+	
+//duplicate
+class Freq2
+{
+	public static void main(String [] args)
+	{
+		String s=new String("hello all good all morning morning");
+		String s1[]=s.split(" ");
+		int count=0;
+		boolean b[]=new boolean[s1.length];
+		for(int x=0;x<=s1.length-1;x++)
+		{
+			String word=s1[x];
+			if(b[x]==true)
+				continue;
+			count=0;
+			for(int y=x+1;y<=s1.length-1;y++)
+			{
+				String word1=s1[y];
+				if(word.equals(word1))
+				{
+					b[y]=true;
+					count++;
+				}
+			}
 			
+			if(count>0)
+				System.out.println(s1[x]);
+			
+		}
+	}
+}
+
+//all
+//morning
+
+
+class Freq3
+{
+	public static void main(String [] args)
+	{
+		String s=new String("hello all good all morning morning");
+		String s1[]=s.split(" ");
+		int count=0;
+		boolean b[]=new boolean[s1.length];
+		for(int x=0;x<=s1.length-1;x++)
+		{
+			String word=s1[x];
+			if(b[x]==true)
+				continue;
+			count=0;
+			for(int y=x+1;y<=s1.length-1;y++)
+			{
+				String word1=s1[y];
+				if(word.equals(word1))
+				{
+					b[y]=true;
+					count++;
+				}
+			}
+			
+			if(b[x]==false)
+				System.out.println(s1[x]);
+			
+		}
+	}
+}
+
+//hello
+//all
+//good 
+//morning
+		
 
 class Rev
 {
