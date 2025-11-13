@@ -21,14 +21,12 @@ class Freq
 					count++;
 				}
 				
+			
 			}
-			c1[x]=count;
+			System.out.println(c[x]+":"+count);
+			
 		}
-		for(int x=0;x<=c1.length-1;x++)
-		{
-			if(c1[x]>0)
-			System.out.println(c[x]+":"+c1[x]);
-		}
+		
 	}
 }
 
