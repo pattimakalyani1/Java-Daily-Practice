@@ -3,12 +3,12 @@ class A23
 {
 	public static void main(String [] args)
 	{
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
+		Scanner sc1=new Scanner(System.in);
+		int n=sc1.nextInt();
 		int a[]=new int[n];
 		for(int x=0;x<=a.length-1;x++)
 		{
-			a[x]=sc.nextInt();
+			a[x]=sc1.nextInt();
 		}
 				
 		System.out.println("result");					
