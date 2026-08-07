@@ -931,24 +931,41 @@ interface Hello
 	void m2();
 }
 
+
 class Hai implements Hello
 {
 	public void m1()
 	{
-		System.out.println("m1);
+		System.out.println("m1");
 	}
 	public void m2()
 	{
-		System.out.println("m2);
+		System.out.println("m2");
 	}
 	
+}
+
+class B implements Hello
+{
+	public void m1()
+	{
+		System.out.println("m1 in B class");
+	}
+	
+	
+
+}
+
+class Main 
+{
 	public static void main(String [] args)
 	{
 		Hai h=new Hai();
 		h.m1();
-		h.m2();
+		
 	}
 }
+	
 
 	
 
